@@ -1,0 +1,18 @@
+{
+  "name": "Chritter",
+  "version": "1.0",
+  "description": "A Twitter button for your toolbar.",
+  "icons": {"128": "icon.png"},
+  "content_scripts": [
+    {
+      "matches": ["https://minglehosting.thoughtworks.com/*"],
+      "js": ["jquery.js","prototype.js","scriptaculous.js","lightbox.js","popup.js"],
+      "css": ["lightbox.css"]
+    }
+  ],
+  "browser_action": {
+    "default_icon": "browseraction.png",
+    "default_title": "Chritter",
+    "popup": "popup.html"
+  }
+}
