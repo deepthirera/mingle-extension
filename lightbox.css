@@ -44,7 +44,7 @@
 	padding:0;
 	width:32px;
 	height:32px;
-	background:url("images/loading.gif") center center no-repeat;
+	background:url("chrome-extension://bpbhkcolcpegkkbhdcaoibkmndcaclpm/loading.gif") center center no-repeat;
 	text-indent:-9999px;
 }
 #hoverNav{
@@ -61,14 +61,14 @@
 #prevLinkImg, #nextLinkImg{
 	width: 49%;
 	height: 100%;
-	background: transparent url("images/blank.gif") no-repeat; /* Trick IE into showing hover */
+	background: transparent url("chrome-extension://bpbhkcolcpegkkbhdcaoibkmndcaclpm/blank.gif") no-repeat; /* Trick IE into showing hover */
 	display: block;
 	text-indent:-9999px;
 	}
 #prevLinkImg { left: 0; float: left;}
 #nextLinkImg { right: 0; float: right;}
-#prevLinkImg:hover, #prevLinkImg:visited:hover { background: url("images/prevlabel.gif") left 15% no-repeat; }
-#nextLinkImg:hover, #nextLinkImg:visited:hover { background: url("images/nextlabel.gif") right 15% no-repeat; }
+#prevLinkImg:hover, #prevLinkImg:visited:hover { background: url("chrome-extension://bpbhkcolcpegkkbhdcaoibkmndcaclpm/prevlabel.gif") left 15% no-repeat; }
+#nextLinkImg:hover, #nextLinkImg:visited:hover { background: url("chrome-extension://bpbhkcolcpegkkbhdcaoibkmndcaclpm/nextlabel.gif") right 15% no-repeat; }
 
 
 #imageDataContainer{
@@ -95,7 +95,7 @@
 	float:right;
 	width:66px;
 	height:28px;
-	background:url("images/closelabel.gif") no-repeat;
+	background:url("chrome-extension://bpbhkcolcpegkkbhdcaoibkmndcaclpm/closelabel.gif") no-repeat;
 	text-indent:-9999px;
 	overflow:hidden;
 }	
