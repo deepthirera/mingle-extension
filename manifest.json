@@ -6,7 +6,7 @@
   "content_scripts": [
     {
       "matches": ["https://minglehosting.thoughtworks.com/*"],
-      "js": ["prototype.js","scriptaculous.js","effects.js","lightbox.js","popup.js"],
+      "js": ["jquery-1.7.2.min.js","lightbox.js","popup.js"],
       "css": ["lightbox.css"]
     }
   ],
