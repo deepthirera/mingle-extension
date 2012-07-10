@@ -3,17 +3,18 @@
 // found in the LICENSE file.
 //document.getElementById("content").getElementsByTagName("img")
 var imgs = document.getElementById("content").getElementsByTagName("img");
+var abcd = document.createElement('a');
+abcd.rel = "lightbox[Stories]";
 
 img_length = imgs.length;
 for(var i=0; i< img_length; i++){
-var abcd = document.createElement('a');
-abcd.href = imgs[i].src;
-abcd.rel = "lightbox[Stories]";
+var clonenode = abcd.cloneNode(true);
+clonenode.href = imgs[i].src;
 var par = imgs[i].parentNode;
-var ref = par.replaceChild(abcd,imgs[i]);
+var ref = par.replaceChild(clonenode,imgs[i]);
 
-abcd.appendChild(ref);
-console.log(abcd);
+clonenode.appendChild(ref);
+console.log(clonenode);
 }
 
 
