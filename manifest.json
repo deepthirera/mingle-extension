@@ -7,7 +7,8 @@
     {
       "matches": ["https://minglehosting.thoughtworks.com/*"],
       "js": ["jquery-1.7.2.min.js","lightbox.js","popup.js"],
-      "css": ["lightbox.css"]
+      "css": ["lightbox.css"],
+      "run_at": "document_end"      
     }
   ],
   "browser_action": {
