@@ -14,7 +14,7 @@ var par = imgs[i].parentNode;
 var ref = par.replaceChild(clonenode,imgs[i]);
 
 clonenode.appendChild(ref);
-console.log(clonenode);
+
 }
 
 
@@ -39,8 +39,8 @@ script.type = 'text/javascript';
 script1.type = 'text/javascript';
 script2.type = 'text/javascript';
 script3.type = 'text/javascript';
-script.src = chrome.extension.getURL('jquery-1.7.2.min.js');
-document.getElementsByTagName('head')[0].appendChild(script); 
+// script.src = chrome.extension.getURL('jquery-1.7.2.min.js');
+// document.getElementsByTagName('head')[0].appendChild(script); 
 // script2.src = chrome.extension.getURL('jquery-ui-1.8.18.custom.min.js');
 // document.getElementsByTagName('head')[0].appendChild(script2); 
 // script3.src = chrome.extension.getURL('jquery.smooth-scroll.min.js');
