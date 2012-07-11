@@ -86,9 +86,9 @@ lightbox = new Lightbox options
       var $lightbox,
         _this = this;
       $("<div>", {
-        id: 'lightboxOverlay'
+        id: 'slideshow_lightboxOverlay'
       }).after($('<div/>', {
-        id: 'lightbox'
+        id: 'slideshow_lightbox'
       }).append($('<div/>', {
         "class": 'lb-outerContainer'
       }).append($('<div/>', {
@@ -124,11 +124,11 @@ lightbox = new Lightbox options
       }).append($('<img/>', {
         src: this.options.fileCloseImage
       }))))))).appendTo($('body'));
-      $('#lightboxOverlay').hide().on('click', function(e) {
+      $('#slideshow_lightboxOverlay').hide().on('click', function(e) {
         _this.end();
         return false;
       });
-      $lightbox = $('#lightbox');
+      $lightbox = $('#slideshow_lightbox');
       $lightbox.hide().on('click', function(e) {
         if ($(e.target).attr('id') === 'lightbox') _this.end();
         return false;
@@ -179,7 +179,7 @@ lightbox = new Lightbox options
       $window = $(window);
       top = $window.scrollTop() + $window.height() / 10;
       left = $window.scrollLeft();
-      $lightbox = $('#lightbox');
+      $lightbox = $('#slideshow_lightbox');
       $lightbox.css({
         top: top + 'px',
         left: left + 'px'
@@ -191,10 +191,10 @@ lightbox = new Lightbox options
       var $image, $lightbox, preloader,
         _this = this;
       this.disableKeyboardNav();
-      $lightbox = $('#lightbox');
+      $lightbox = $('#slideshow_lightbox');
       $image = $lightbox.find('.lb-image');
       this.sizeOverlay();
-      $('#lightboxOverlay').fadeIn(this.options.fadeDuration);
+      $('#slideshow_lightboxOverlay').fadeIn(this.options.fadeDuration);
       $('.loader').fadeIn('slow');
       $lightbox.find('.lb-image, .lb-nav, .lb-prev, .lb-next, .lb-dataContainer, .lb-numbers, .lb-caption').hide();
       $lightbox.find('.lb-outerContainer').addClass('animating');
@@ -210,13 +210,13 @@ lightbox = new Lightbox options
     };
 
     Lightbox.prototype.sizeOverlay = function() {
-      return $('#lightboxOverlay').width($(document).width()).height($(document).height());
+      return $('#slideshow_lightboxOverlay').width($(document).width()).height($(document).height());
     };
 
     Lightbox.prototype.sizeContainer = function(imageWidth, imageHeight) {
       var $container, $lightbox, $outerContainer, containerBottomPadding, containerLeftPadding, containerRightPadding, containerTopPadding, newHeight, newWidth, oldHeight, oldWidth,
         _this = this;
-      $lightbox = $('#lightbox');
+      $lightbox = $('#slideshow_lightbox');
       $outerContainer = $lightbox.find('.lb-outerContainer');
       oldWidth = $outerContainer.outerWidth();
       oldHeight = $outerContainer.outerHeight();
@@ -251,7 +251,7 @@ lightbox = new Lightbox options
 
     Lightbox.prototype.showImage = function() {
       var $lightbox;
-      $lightbox = $('#lightbox');
+      $lightbox = $('#slideshow_lightbox');
       $lightbox.find('.lb-loader').hide();
       $lightbox.find('.lb-image').fadeIn('slow');
       this.updateNav();
@@ -262,7 +262,7 @@ lightbox = new Lightbox options
 
     Lightbox.prototype.updateNav = function() {
       var $lightbox;
-      $lightbox = $('#lightbox');
+      $lightbox = $('#slideshow_lightbox');
       $lightbox.find('.lb-nav').show();
       if (this.currentImageIndex > 0) $lightbox.find('.lb-prev').show();
       if (this.currentImageIndex < this.album.length - 1) {
@@ -273,7 +273,7 @@ lightbox = new Lightbox options
     Lightbox.prototype.updateDetails = function() {
       var $lightbox,
         _this = this;
-      $lightbox = $('#lightbox');
+      $lightbox = $('#slideshow_lightbox');
       if (typeof this.album[this.currentImageIndex].title !== 'undefined' && this.album[this.currentImageIndex].title !== "") {
         $lightbox.find('.lb-caption').html(this.album[this.currentImageIndex].title).fadeIn('fast');
       }
@@ -331,8 +331,8 @@ lightbox = new Lightbox options
     Lightbox.prototype.end = function() {
       this.disableKeyboardNav();
       $(window).off("resize", this.sizeOverlay);
-      $('#lightbox').fadeOut(this.options.fadeDuration);
-      $('#lightboxOverlay').fadeOut(this.options.fadeDuration);
+      $('#slideshow_lightbox').fadeOut(this.options.fadeDuration);
+      $('#slideshow_lightboxOverlay').fadeOut(this.options.fadeDuration);
       return $('select, object, embed').css({
         visibility: "visible"
       });

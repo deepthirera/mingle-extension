@@ -1,5 +1,5 @@
 /* line 6, ../sass/lightbox.sass */
-#lightboxOverlay {
+#slideshow_lightboxOverlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -11,7 +11,7 @@
 }
 
 /* line 15, ../sass/lightbox.sass */
-#lightbox {
+#slideshow_lightbox {
   position: absolute;
   left: 0;
   width: 100%;
@@ -22,12 +22,12 @@
   font-weight: normal;
 }
 /* line 24, ../sass/lightbox.sass */
-#lightbox img {
+#slideshow_lightbox img {
   width: auto;
   height: auto;
 }
 /* line 27, ../sass/lightbox.sass */
-#lightbox a img {
+#slideshow_lightbox a img {
   border: none;
 }
 
