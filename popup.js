@@ -25,14 +25,17 @@ if ((document.getElementById("content").getElementsByTagName("img")).length > 0)
   script.src = chrome.extension.getURL('lightbox.js');
   document.getElementsByTagName('head')[0].appendChild(script); 
 
+  var link = document.createElement('a');
   var img = document.createElement("img");
   img.src=chrome.extension.getURL('new.png');
   img.setAttribute('height',70);
   img.setAttribute('width',70);
+  link.href = "#";
+  link.appendChild(img);
 
   var top_header = document.getElementById("card_show_actions_without_back_link_top");
-  top_header.appendChild(img);
-  img.onclick = Start_slide_show;
+  top_header.appendChild(link);
+  link.onclick = Start_slide_show;
 }
 
 function Start_slide_show()
