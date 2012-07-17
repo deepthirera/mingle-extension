@@ -25,13 +25,14 @@ script.type = 'text/javascript';
 script.src = chrome.extension.getURL('lightbox.js');
 document.getElementsByTagName('head')[0].appendChild(script); 
 
-var buttonnode= document.createElement('input');
-buttonnode.setAttribute('type','button');
-buttonnode.setAttribute('value','Slideshow');
+var img = document.createElement("img");
+img.src=chrome.extension.getURL('new.png');
+img.setAttribute('height',70);
+img.setAttribute('width',70);
 
 var top_header = document.getElementById("card_show_actions_without_back_link_top");
-top_header.appendChild(buttonnode);
-buttonnode.onclick = Start_slide_show;
+top_header.appendChild(img);
+img.onclick = Start_slide_show;
 }
 
 function Start_slide_show()

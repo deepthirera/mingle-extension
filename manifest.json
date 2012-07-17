@@ -11,7 +11,7 @@
       "run_at": "document_end"      
     }
   ],
-  "browser_action": {
+  "page_action": {
     "default_icon": "browseraction.png",
     "default_title": "Chritter",
     "popup": "popup.html"
