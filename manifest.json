@@ -1,8 +1,8 @@
 {
-  "name": "Chritter",
+  "name": "Mingle Image Viewer",
   "version": "1.0",
-  "description": "A Twitter button for your toolbar.",
-  "icons": {"128": "icon.png"},
+  "description": "Image gallery for your mingle page",
+  "icons": {"128": "new.png"},
   "content_scripts": [
     {
       "matches": ["https://minglehosting.thoughtworks.com/*"],
@@ -12,8 +12,7 @@
     }
   ],
   "page_action": {
-    "default_icon": "browseraction.png",
-    "default_title": "Chritter",
-    "popup": "popup.html"
+    "default_title": "Mingle Image Viewer",
+    "default_icon": "new.png"
   }
 }
