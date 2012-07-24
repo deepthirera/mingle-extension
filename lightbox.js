@@ -50,7 +50,7 @@ lightbox = new Lightbox options
     function LightboxOptions() {
       this.fileLoadingImage = chrome.extension.getURL('loading.gif');
       this.fileCloseImage = chrome.extension.getURL('close.png');
-      this.resizeDuration = 700;
+      this.resizeDuration = 0;
       this.fadeDuration = 500;
       this.labelImage = "Image";
       this.labelOf = "of";
